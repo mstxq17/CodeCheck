@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="keyword" content="">
+		<title>{$lang.cp_home}</title>
+		<link rel="stylesheet" href="__PUBLIC__/console/css/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__PUBLIC__/console/fonts/iconfont.css" />
+		<link rel="stylesheet" href="__PUBLIC__/console/css/jquery.cxcalendar.css" />
+		<link rel="stylesheet" href="__PUBLIC__/console/css/style.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-default header">
+        <div class="navbar-brand">
+          <a href="index.html"><img src="__PUBLIC__/console/img/ectouch_logo.png" /></a>
+        </div>
+        <!-- menu-->
+        <div class="topbar-wrapper">
+          <div class="topbar-left">
+            <ul class="navbar-nav">
+              <li class=""><a href="./">管理控制台 </a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品与服务 <span class="caret"></span></a>
+                <ul class="dropdown-menu header-product">
+                  <li class="select">
+                    <a href="http://www.ectouch.cn/topics/b2c" target="_blank">
+                      <i class="iconfont icon-shangcheng"></i>
+                      <p>微商城</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.ectouch.cn/topics/fenxiao" target="_blank">
+                      <i class="iconfont icon-fenxiao"></i>
+                      <p>微分销</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://dsc.ecmoban.com/weshop.html#upcoming" target="_blank">
+                      <i class="iconfont icon-shanghu"></i>
+                      <p>多商户</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.ectouch.cn/service.html" target="_blank">
+                      <i class="iconfont icon-shanghu"></i>
+                      <p>周边服务</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.ectouch.cn/school.html" target="_blank">
+                      <i class="iconfont icon-shanghu"></i>
+                      <p>电商学院</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+          <div class="topbar-right">
+            <ul class="navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle dropdown-search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-search"></span>搜索
+                </a>
+                <ul class="dropdown-menu header-search">
+                  <li class="">
+                    <input type="text" class="form-control fl" placeholder="搜索功能" aria-describedby="basic-addon2">
+                    <span class="iconfont fr icon-iconfontenter"></span>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-phone">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-phone"></span>手机版
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <img src="__PUBLIC__/console/img/qrcode.png" width="140" />
+                    <p>扫码查看微商城</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-msg">
+                <a href="#" class="dropdown-toggle dropdown-search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-bell"></span>
+                  <span class="dropdown-number">0</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="">
+                    <div class="dropdown-msg-title">站内消息通知</div>
+                    <div class="dropdown-msg-body">
+                      <p>您暂时没有消息</p>
+                    </div>
+                    <div class="dropdown-msg-footer"><a href="message.php?act=list" target="workspace">查看更多</a></div>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">帮助与支持 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://wiki.ectouch.cn" target="_blank">技术文档</a></li>
+                  <li><a href="http://club.ectouch.cn" target="_blank">交流社区</a></li>
+                </ul>
+              </li>
+              <li class=""><a href="message.php?act=list" target="workspace">管理员留言</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎回来，{$smarty.session.admin_name} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="privilege.php?act=modif" target="workspace">修改密码</a></li>
+                  <li><a href="index.php?act=clear_cache" target="workspace">清除缓存</a></li>
+                  <li><a href="privilege.php?act=logout">退出</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+			<!--main-->
+			<div class="main">
+				<!--left-->
+				<div class="main-left active" id="pjax-container">
+					<a class="nav-header sidemenu-header">
+						<i class="glyphicon glyphicon-menu-hamburger"></i>
+					</a>
+					<a href="#user" class="nav-header collapsed" data-toggle="collapse">
+						<span class=" glyphicon glyphicon-chevron-toggle"></span>管理中心
+					</a>
+					<ul id="user" class="nav nav-list collapse secondmenu">
+						{foreach from=$menus item=menu key=k}
+						<li><a href="javascript:openItem('{$k}');"><i class="iconfont icon-iconfontshangpineps"></i> {$menu.label}</a></li>
+						{/foreach}
+					</ul>
+				</div>
+				<!--right-->
+				<div class="main-content active">
+					<!--left-->
+					{foreach from=$menus item=menu key=key}
+					<div class="main-content-sidemenu" id="sort_{$key}">
+						<div class="main-sidemenu-title">{$menu.label}</div>
+						<!--内容-->
+						<div class="main-sidemenu-cont">
+							<ul class="nav nav-list collapse main-sidemenu-list">
+								{foreach from=$menu.children item=child key=k}
+								<li class="active"><a href="javascript:openItem('{$k},{$child.action},{$key}');">{$child.label}</a></li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+					{/foreach}
+
+					<!--navbar-collapse-->
+					<div class="main-collapse active">
+						<i class="iconfont">&#xe605;</i>
+					</div>
+					<!--right-->
+					<div class="main-content-content active">
+						<iframe src="index.php?act=main" id="workspace" name="workspace" style="overflow: visible;" frameborder="0" width="100%" height="100%" scrolling="yes" onload="window.parent"></iframe>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script type="text/javascript" src="__PUBLIC__/console/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/console/css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/console/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/console/js/comm.js"></script>
+    <script type="text/javascript">
+    </script>
+	</body>
+</html>

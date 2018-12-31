@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{$lang.app_name}">
+    <meta name="author" content="{$lang.app_name}">
+    <meta name="keyword" content="{$lang.app_name}">
+    <title>{$lang.cp_home}-2016版</title>
+    <link rel="stylesheet" href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/console/css/style.css" />
+  </head>
+  <body>
+    <div class="container ">
+      {include file="2016_pageheader.htm"}
+
+      <!--main-->
+      <div class="main">
+        <!--left-->
+        <div class="main-left active" id="pjax-container">
+          <a class="nav-header sidemenu-header">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+          </a>
+          <a href="#product" class="nav-header collapsed" data-toggle="dropdown">
+            <span class=" glyphicon glyphicon-chevron-toggle"></span>产品与服务产品与服务
+          </a>
+          <ul id="product" class="nav nav-list collapse secondmenu">
+            <li class=""><a href="#"><i class="iconfont">&#xe616;</i> 云订货云订货云订货云订货云订货云订货</a></li>
+          </ul>
+          <a href="#user" class="nav-header collapsed" data-toggle="dropdown">
+            <span class=" glyphicon glyphicon-chevron-toggle"></span>管理中心
+          </a>
+          <ul id="user" class="nav nav-list collapse secondmenu">
+            <li class=""><a href="goods.html"><i class="iconfont">&#xe618;</i> 商品</a></li>
+            <li><a href="orderlist.html"><i class="iconfont">&#xe61b;</i> 订单</a></li>
+            <li><a href="member.html"><i class="iconfont">&#xe619;</i> 会员</a></li>
+            <li><a href="edit.html"><i class="iconfont">&#xe617;</i> 内容</a></li>
+            <li><a href="advertise.html"><i class="iconfont">&#xe61f;</i> 营销</a></li>
+            <li><a href="analyse.html"><i class="iconfont">&#xe61d;</i> 报表</a></li>
+            <li><a href="template.html"><i class="iconfont">&#xe615;</i> 模版</a></li>
+            <li><a href="database.html"><i class="iconfont">&#xe61e;</i> 数据库</a></li>
+            <li><a href="toolbox.html"><i class="iconfont">&#xe622;</i> 工具箱</a></li>
+            <li><a href="distribution.html"><i class="iconfont">&#xe60f;</i> 微分销</a></li>
+            <li><a href="wechat.html"><i class="iconfont">&#xe61c;</i> 微信通</a></li>
+          </ul>
+        </div>
+        <!--navbar-collapse-->
+        <div class="main-collapse active">
+          <i class="iconfont">&#xe605;</i>
+        </div>
+        <!--right-->
+        <div class="main-content active">
+          <!--left-->
+          <div class="main-content-sidemenu">
+            <div class="main-sidemenu-title">云订货</div>
+            <!--内容-->
+            <div class="main-sidemenu-cont">
+              <ul class="nav nav-list collapse main-sidemenu-list">
+                <li class="active"><a href="#">系统信息</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--navbar-collapse-->
+          <div class="main-collapse active">
+            <i class="iconfont">&#xe605;</i>
+          </div>
+          <!--right-->
+          <div class="main-content-content active">
+            <div class="main-content-title">
+              <h1>系统信息</h1>
+            </div>
+            <div class="order-detail">
+              <div class="order-left fl">
+                <ul class="order-msg fl">
+                  <li>
+                    <p>访客数</p>
+                    <p class="color-blue">30915</p>
+                  </li>
+                </ul>
+
+                <ul class="order-msg">
+                  <li>
+                    <p>下单人数</p>
+                    <p class="color-green">30915</p>
+                  </li>
+                  <li>
+                    <p>下单笔数</p>
+                    <p class="color-green">30915</p>
+                  </li>
+                  <li>
+                    <p>下单金额</p>
+                    <p class="color-green">30915</p>
+                  </li>
+                </ul>
+                <ul class="order-msg">
+                  <li>
+                    <p>付款人数</p>
+                    <p class="color-red">30915</p>
+                  </li>
+                  <li>
+                    <p>付款笔数</p>
+                    <p class="color-red">30915</p>
+                  </li>
+                  <li>
+                    <p>商品销量</p>
+                    <p class="color-red">30915</p>
+                  </li>
+                  <li>
+                    <p>付款金额</p>
+                    <p class="color-red">30915</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="order-echelon fl">
+                <div class="echelon">
+                  <p><i class="iconfont">&#xe612;</i>访客</p>
+                </div>
+                <div class="echelon second-echelon">
+                  <p><i class="iconfont">&#xe61b;</i>下单</p>
+                </div>
+                <div class="echelon third-echelon">
+                  <p><i class="iconfont">&#xe61a;</i>付款</p>
+                </div>
+              </div>
+              <div class="order-arrow fl">
+                <div class=" arrow-top">
+                  <div class="arrow-top-msg">
+                    <p>下单转化率</p>
+                    <p class="color-blue">52.30%</p>
+                  </div>
+                </div>
+                <div class=" arrow-bottom">
+                  <div class="arrow-top-msg">
+                    <p>付款转化率</p>
+                    <p class="color-green">94.24%</p>
+                  </div>
+                </div>
+                <div class="order-arrow-msg">
+                  <p>付款转化率</p>
+                  <p class="color-red">94.24%</p>
+                </div>
+              </div>
+            </div>
+            <!--distributors-->
+            <div class="index-distributor">
+              <div class="index-distributor-top">
+                <p class="index-distributor-title fl">分销商列表</p>
+                <p class="index-distributor-more fr">更多</p>
+              </div>
+              <div class="index-distributor-form">
+                <input type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false" value="+ 添加店铺"></input>
+                <ul class="index-distributor-list">
+                  <li>
+                    <span class="index-distributor-name">店铺名称</span>
+                    <span class="index-distributor-address">店铺地址</span>
+                    <div class="index-distributor-operator">操作</div>
+                  </li>
+                  <li>
+                    <span class="index-distributor-name">毛家饭店</span>
+                    <span class="index-distributor-address">山东省济南市和平小区1栋</span>
+                    <div class="index-distributor-operator">
+                      <a>查看</a><a>修改</a><a>删除</a>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="index-distributor-name">毛家饭店</span>
+                    <span class="index-distributor-address">山东省济南市和平小区1栋</span>
+                    <div class="index-distributor-operator">
+                      <a>查看</a><a>修改</a><a>删除</a>
+                    </div>
+                  </li>
+                </ul>
+                <nav class="comm-page">
+                  <ul class="pagination fr">
+                    <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+                    <input type="text" class="form-control fl" name="" id="" value="" />
+                    <input type="button" class="btn btn-default fl" aria-haspopup="true" aria-expanded="false" value="跳转"></input>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!--right-2-->
+          <div class="main-content-content">
+            <div class="main-content-title">
+              <h1>订单概况2</h1>
+            </div>
+          </div>
+          <!--right-3-->
+          <div class="main-content-content">
+            <div class="main-content-title">
+              <h1>订单概况3</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {include file="2016_pagefooter.htm"}
+
+  </body>
+</html>

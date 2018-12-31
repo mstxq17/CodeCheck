@@ -1,0 +1,107 @@
+{include file="pageheader"}
+
+<div class="container-fluid" style="padding:0">
+	<div class="row" style="margin:0">
+		<div class="col-md-12 col-sm-12 col-lg-12" style="padding:0;">
+			<div class="panel panel-default">
+				<div class="panel-heading">{$lang['edit'].$lang['mini_program']}</div>
+				<div class="explanation" id="explanation">
+		        	<div class="ex_tit"><i class="sc_icon"></i><h4>操作提示</h4></div>
+		            <ul>
+		            	<li>配置前准备：</li>
+		            	<li>一、需要申请一个小程序号，并且绑定微信开发平台。</li>
+		            	<li>二、网站域名 需要通过ICP备案并正确解析到空间服务器，临时域名与IP地址无法配置。</li>
+		            	<li>三、以上都准备好之后，登录小程序公众号平台 https://mp.weixin.qq.com/，获取且依次填写好小程序Appid，Appsecret，商城URL。 </li>
+		            	<li>四、特别注意商城URL必须是https </li>
+		            	<li>五、依次完善小程序支付设置信息</li>
+	            	</ul>
+		        </div>
+				<table border="0" cellpadding="0" cellspacing="0" class="table table-hover table-bordered table-striped">
+					<form method="post" action="{url('wechat/mini_program')}" class="form-horizontal" role="form" onsubmit="return submit_info()">
+						<tr>
+							<td width="200">{$lang['mini_program_appid']}</td>
+							<td><div class="col-sm-4">
+								<input type="text" id="appid" name="data[app_id]" class="form-control" value="{$data['app_id']}"/>
+							</div>
+							</td>
+						</tr>
+						<tr>
+							<td>{$lang['mini_program_secret']}</td>
+							<td><div class="col-sm-4">
+								<input type="text" id="secret" name="data[app_secret]" class="form-control" value="{$data['app_secret']}">
+							</div>
+							</td>
+						</tr>
+						<tr>
+							<td>{$lang['mini_program_shop_url']}</td>
+							<td><div class="col-sm-4">
+								<input type="text" id="shop_url" name="data[shop_url]" class="form-control" value="{$data['shop_url']}">
+								</div>
+								<p class="help-block">{$lang['mini_program_help3']}</p>
+								</td>
+						</tr>
+						<tr>
+							<td>{$lang['mini_program_mch_id']}</td>
+							<td><div class="col-sm-4">
+								<input type="text" id="mch_id" name="data[mch_id]" class="form-control" value="{$data['mch_id']}">
+								</div>
+								<p class="help-block">{$lang['mini_program_help1']}</p>
+								</td>
+						</tr>
+						<tr>
+							<td>{$lang['mini_program_mch_key']}</td>
+							<td><div class="col-sm-4">
+								<input type="text" id="mch_key" name="data[mch_key]" class="form-control" value="{$data['mch_key']}">
+								</div>
+								<p class="help-block">{$lang['mini_program_help2']}</p>
+								</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><div class="col-sm-4">
+								<input type="submit" name="submit" value="{$lang['button_save']}" class="btn btn-primary" />
+								</div></td>
+						</tr>
+					</form>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function submit_info(){
+		var appid = document.getElementById('appid').value;
+		var secret = document.getElementById('secret').value;
+		var shop_url = document.getElementById('shop_url').value;
+		var mch_id = document.getElementById('mch_id').value;
+		var mch_key = document.getElementById('mch_key').value;
+
+		if(appid.replace(/(^s*)|(s*$)/g, "").length == 0 || appid.indexOf(" ") != -1){
+			alert('Appid中不能含有空格');
+			return false;
+		}
+
+		if(secret.replace(/(^s*)|(s*$)/g, "").length == 0 || secret.indexOf(" ") != -1){
+			alert('Secret中不能含有空格');
+			return false;
+		}
+
+		if(shop_url.replace(/(^s*)|(s*$)/g, "").length == 0 || shop_url.indexOf(" ") != -1){
+			alert('商城链接中不能含有空格');
+			return false;
+		}
+
+		if(mch_id.replace(/(^s*)|(s*$)/g, "").length == 0 || mch_id.indexOf(" ") != -1){
+			alert('商户号中不能含有空格');
+			return false;
+		}
+
+		if(mch_key.replace(/(^s*)|(s*$)/g, "").length == 0 || mch_key.indexOf(" ") != -1){
+			alert('支付秘钥中不能含有空格');
+			return false;
+		}
+	}
+	
+</script>
+{include file="pagefooter"}

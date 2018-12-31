@@ -1,0 +1,13 @@
+{
+    "require": {
+        "filp/whoops": "^1.1",
+        "aliyuncs/oss-sdk-php": "^2.0",
+        "riverslei/payment": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ecmoban\\": "vendor/ecmoban/"
+        },
+        "files": ["vendor/ecmoban/ecmoban.php"]
+    }
+}
